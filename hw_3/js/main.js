@@ -92,7 +92,7 @@ class Basket {
                 this.viewBasket();
                 this.render();
                 this.deleteBasket();
-                this.addBasket();
+                // this.addBasket();
             });
     }
 
