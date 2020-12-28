@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw_4</title>
+</head>
+<body>
+    <input type="file" onchange="readFile(this)">
+
+    <script>
+    function readFile(input) {
+      let file = input.files[0];
+    
+      let reader = new FileReader();
+    
+      reader.readAsText(file);
+    
+      reader.onload = function() {
+          let result = reader.result
+          alert(`ЗАДАНИЕ №1\n\n${result.replace(/'/g, '"')}`);
+          alert(`ЗАДАНИЕ №2\n\n${result.replace(/\b'\b/g, '#').replace(/'/g, '"').replace(/#/g, "'")}`);
+      };
+    
+    }
+    </script>
+
+</body>
+</html>
